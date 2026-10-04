@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<style>
+  @font-face {
+    font-family: "PixelFusion";
+    src: url("./fusion-pixel-12px-proportional-zh-hans.woff2") format("woff2");
+    font-display: block;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; }
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; }
+
+  .card {
+    position: relative;
+    width: 1080px;
+    height: 1350px;
+    overflow: hidden;
+    background: #f4b5c7;
+  }
+  .card > img.bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* 底部遮罩，让文字清晰 */
+  .card::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 62%;
+    background: linear-gradient(180deg, rgba(42, 22, 12, 0) 0%, rgba(46, 24, 13, 0.55) 34%, rgba(43, 22, 12, 0.92) 72%, #2a140b 100%);
+  }
+
+  .top-kicker {
+    display: none;
+  }
+
+  .info {
+    position: absolute;
+    left: 70px;
+    right: 70px;
+    bottom: 96px;
+    text-align: center;
+    color: #fff6dd;
+    z-index: 2;
+  }
+  .info .hello {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #ffe9b0;
+    text-shadow: 0 2px 0 rgba(80, 40, 15, 0.6);
+  }
+  .info .names {
+    margin-top: 30px;
+    font-family: "PixelFusion", "Microsoft YaHei", sans-serif;
+    font-size: 96px;
+    line-height: 1.15;
+    color: #fff7dc;
+    text-shadow: 0 6px 0 #8c2f1e, 0 10px 26px rgba(0,0,0,0.45);
+    letter-spacing: 0.04em;
+    image-rendering: pixelated;
+  }
+  .info .names .heart {
+    display: inline-block;
+    margin: 0 26px;
+    color: #ffd36b;
+    text-shadow: 0 6px 0 #8c2f1e;
+  }
+  .info .rule {
+    width: 460px;
+    margin: 34px auto 30px;
+    border-top: 4px dashed rgba(255, 230, 160, 0.75);
+  }
+  .info .when {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    text-shadow: 0 3px 0 rgba(90, 40, 15, 0.6);
+  }
+  .info .when small {
+    display: block;
+    margin-top: 12px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffd98a;
+    letter-spacing: 0.10em;
+  }
+  .info .where {
+    margin-top: 26px;
+    font-size: 32px;
+    line-height: 1.55;
+    font-weight: 700;
+    color: #ffecc4;
+    text-shadow: 0 2px 0 rgba(60, 30, 12, 0.55);
+  }
+  .info .cta {
+    margin-top: 40px;
+    display: inline-block;
+    padding: 18px 44px;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #7c2f1b;
+    background: #ffe9a8;
+    border: 6px solid #7c3a1d;
+    border-radius: 8px;
+    box-shadow: 0 8px 0 rgba(70, 30, 12, 0.55);
+  }
+  .info .sign {
+    margin-top: 26px;
+    font-size: 26px;
+    letter-spacing: 0.10em;
+    color: #ffdf9e;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="bg" src="./bg.png" alt="" />
+    <div class="info">
+      <div class="hello">诚挚邀请您见证我们的幸福时刻</div>
+      <div class="names">黄欢 <span class="heart">♥</span> 刘紫昕</div>
+      <div class="rule"></div>
+      <div class="when">2026年11月20日 · 11:28<small>农历十月十二 · 星期五</small></div>
+      <div class="where">六安市金安区 · 吉事文华南山店（华野大厦）<br />梦幻花海厅</div>
+      <div class="cta">💌 点击聊天中的链接 · 查看完整电子请柬</div>
+      <div class="sign">黄欢 &amp; 刘紫昕 敬邀 · 恭候光临</div>
+    </div>
+  </div>
+</body>
+</html>

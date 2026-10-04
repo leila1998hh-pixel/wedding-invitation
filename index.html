@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#5f9f4c" />
+  <!-- 微信分享卡片已配置为完整链接，可直接生效 -->
+  <meta property="og:title" content="婚礼邀请函 | 黄欢 & 刘紫昕">
+  <meta property="og:description" content="这份喜悦太大啦，就像一个需要用斧头才能劈开的巨大南瓜，迫不及待想和你分享！">
+  <meta property="og:image" content="https://4ky3g08xb2u3w.doubaoapps.com/app/app_17fb9nkptg5/og-image.png">
+  <title>婚礼邀请函 | 黄欢 & 刘紫昕</title>
+
+  <!-- 信息配置：婚礼的所有内容都在 config.js 里修改 -->
+  <script src="./config.js"></script>
+  <script>
+    if (window.WEDDING_CONFIG) {
+      var _c = WEDDING_CONFIG;
+      document.title = '婚礼邀请函 | ' + _c.coupleName;
+      document.querySelector('meta[property="og:title"]').setAttribute('content', '婚礼邀请函 | ' + _c.coupleName);
+      document.querySelector('meta[property="og:description"]').setAttribute('content', _c.letter.p1);
+    }
+  </script>
+
+  <script>
+    history.scrollRestoration = 'manual';
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="blessing-locked">
+  <main class="phone-frame" aria-label="星露谷物语风格婚礼邀请函">
+    <nav class="page-dots" aria-label="页面导航">
+      <a class="dot is-active" href="#home" aria-label="首页"></a>
+      <a class="dot" href="#letter" aria-label="书简"></a>
+      <a class="dot" href="#map" aria-label="地点"></a>
+    </nav>
+
+    <button class="music-toggle" type="button" aria-label="播放背景音乐" aria-pressed="false" data-music-toggle>
+      <span class="music-toggle__note" aria-hidden="true">♪</span>
+    </button>
+    <audio id="bgm" src="./bgm.mp3" loop preload="auto"></audio>
+
+    <section id="home" class="screen hero-screen" aria-label="婚礼邀请首页">
+      <div class="peach-blossom-rain" aria-hidden="true">
+        <i class="petal petal-1"></i>
+        <i class="petal petal-2"></i>
+        <i class="petal petal-3"></i>
+        <i class="petal petal-4"></i>
+        <i class="petal petal-5"></i>
+        <i class="petal petal-6"></i>
+        <i class="petal petal-7"></i>
+        <i class="petal petal-8"></i>
+        <i class="petal petal-9"></i>
+        <i class="petal petal-10"></i>
+        <i class="petal petal-11"></i>
+        <i class="petal petal-12"></i>
+      </div>
+      <div class="sprite-parade" aria-hidden="true" data-sprite-parade></div>
+      <button class="music-heart-trigger" type="button" aria-label="点击爱心开启背景音乐" data-music-heart>
+        <span class="music-heart-trigger__heart" aria-hidden="true"></span>
+        <span class="music-heart-trigger__label">点击开启祝福<br/>（推荐开启音量！）</span>
+        <span class="heart-burst heart-burst-one" aria-hidden="true"></span>
+        <span class="heart-burst heart-burst-two" aria-hidden="true"></span>
+        <span class="heart-burst heart-burst-three" aria-hidden="true"></span>
+        <span class="heart-burst heart-burst-four" aria-hidden="true"></span>
+      </button>
+      <div class="sun"></div>
+      <div class="cloud cloud-one"></div>
+      <div class="cloud cloud-two"></div>
+      <div class="mountains"></div>
+      <div class="title-board">
+        <span class="title-kicker">WEDDING</span>
+        <strong>INVITATION</strong>
+      </div>
+
+      <div class="couple-stage" aria-label="新郎新娘卡通形象">
+        <div class="farmer groom" role="img" aria-label="新郎的像素卡通形象">
+          <span class="hat"></span>
+          <span class="head"></span>
+          <span class="hair"></span>
+          <span class="body"></span>
+          <span class="legs"></span>
+        </div>
+        <div class="heart-pixel" aria-hidden="true"></div>
+        <div class="farmer bride" role="img" aria-label="新娘的像素卡通形象">
+          <span class="veil"></span>
+          <span class="head"></span>
+          <span class="hair"></span>
+          <span class="body"></span>
+          <span class="legs"></span>
+        </div>
+      </div>
+
+      <div class="dialog-box" role="note">
+        <div class="dialog-name" data-bind="coupleName"></div>
+        <p>人生从此将展开新的一页。<br />....但前途必定是光明的！</p>
+      </div>
+    </section>
+
+    <section id="letter" class="screen letter-screen" aria-label="婚礼邀请书简">
+      <div class="couple-name-board" aria-label="新郎与新娘">
+        <span class="couple-name-board__person">
+          <small>新郎</small>
+          <b data-bind="groom"></b>
+        </span>
+        <i class="couple-name-board__heart" aria-hidden="true"></i>
+        <span class="couple-name-board__person">
+          <small>新娘</small>
+          <b data-bind="bride"></b>
+        </span>
+      </div>
+      <div class="letter-card">
+        <div class="letter-ribbon" data-bind="letter.ribbon"></div>
+        <h2 data-bind="letter.title"></h2>
+        <p data-bind="letter.p1"></p>
+        <p data-bind="letter.p2"></p>
+        <p data-bind="letter.p3"></p>
+        <p data-bind="letter.p4"></p>
+        <p data-bind="letter.p5"></p>
+        <div class="event-lines">
+          <p><span>婚礼时间</span><b data-bind="dateLine"></b></p>
+          <p><span>婚礼地点</span><b data-bind="location.name"></b></p>
+        </div>
+        <p data-bind="letter.p6"></p>
+        <footer data-bind="letter.footer"></footer>
+        <div class="wax-seal" aria-hidden="true">囍</div>
+      </div>
+
+      <div id="calendar" class="letter-calendar" aria-label="婚礼日历">
+        <div class="calendar-board">
+          <header class="calendar-board__header">
+            <span class="calendar-board__season" data-bind="calendar.season"></span>
+            <h2 data-bind="calendarTitle"></h2>
+            <p data-bind="calendar.subtitle"></p>
+            <div class="wedding-countdown" data-wedding-countdown aria-live="polite">
+              <span class="wedding-countdown__label">距离婚礼还有</span>
+              <strong data-countdown-days>--</strong>
+              <span class="wedding-countdown__unit">天</span>
+            </div>
+          </header>
+
+          <div class="calendar-weekdays" aria-hidden="true">
+            <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+          </div>
+          <div class="calendar-grid" data-calendar-grid></div>
+          <footer class="calendar-board__footer" data-bind="calendarFooter"></footer>
+        </div>
+      </div>
+    </section>
+
+    <section id="map" class="screen map-screen" aria-label="婚礼地点导航">
+      <div class="map-card">
+        <div class="map-header">
+          <span class="map-pin" aria-hidden="true"></span>
+          <div>
+            <p class="eyebrow">Wedding Location</p>
+            <h2 data-bind="location.name"></h2>
+          </div>
+        </div>
+
+        <a class="map-frame" href="#" target="_blank" rel="noreferrer" data-map-link aria-label="打开地图导航">
+          <img src="./map.png" alt="婚礼地点位置截图" data-map-image />
+        </a>
+
+        <div class="location-note">
+          <strong>坐标</strong>
+          <span data-bind="location.coordinates"></span>
+        </div>
+        <div class="travel-guide" data-travel-guide aria-label="到达方式"></div>
+
+        <aside class="stay-transfer-note" data-stay-note aria-label="住宿与接送说明"></aside>
+
+        <div class="map-actions">
+          <a class="pixel-button primary" target="_blank" rel="noreferrer" href="#" data-map-link>打开高德地图导航</a>
+          <button class="pixel-button" type="button" data-copy>复制地址</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" role="status" aria-live="polite">已复制地址</div>
+  <script src="./script.js"></script>
+</body>
+</html>

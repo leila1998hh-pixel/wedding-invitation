@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<style>
+  @font-face {
+    font-family: "PixelFusion";
+    src: url("./fusion-pixel-12px-proportional-zh-hans.woff2") format("woff2");
+    font-display: block;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; }
+
+  .card {
+    position: relative;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: #f4b5c7;
+  }
+  .card > img.bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 38%;
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(40, 20, 10, 0.55) 0%, rgba(40, 20, 10, 0.15) 38%, rgba(40, 20, 10, 0.55) 100%),
+      linear-gradient(0deg, rgba(40, 20, 10, 0.55) 0%, transparent 45%, rgba(40, 20, 10, 0.35) 100%);
+  }
+  .box {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff6dd;
+  }
+  .kicker {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    letter-spacing: 0.34em;
+    color: #ffe6a0;
+    text-shadow: 0 2px 0 rgba(60, 28, 10, 0.6);
+  }
+  .names {
+    margin-top: 18px;
+    font-family: "PixelFusion", "Microsoft YaHei", sans-serif;
+    font-size: 92px;
+    line-height: 1.1;
+    color: #fff8e0;
+    text-shadow: 0 5px 0 #8c2f1e, 0 10px 24px rgba(0,0,0,0.5);
+    letter-spacing: 0.04em;
+  }
+  .names .heart {
+    display: inline-block;
+    margin: 0 22px;
+    color: #ffd36b;
+    text-shadow: 0 5px 0 #8c2f1e;
+  }
+  .when {
+    margin-top: 22px;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+    text-shadow: 0 3px 0 rgba(80, 36, 14, 0.6);
+  }
+  .when small {
+    display: block;
+    margin-top: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffd98a;
+    letter-spacing: 0.12em;
+  }
+  .where {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffeec9;
+    text-shadow: 0 2px 0 rgba(60, 28, 10, 0.6);
+    letter-spacing: 0.03em;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="bg" src="./bg.png" alt="" />
+    <div class="box">
+      <div class="kicker">WEDDING INVITATION · 婚礼邀请函</div>
+      <div class="names">黄欢 <span class="heart">♥</span> 刘紫昕</div>
+      <div class="when">2026年11月20日 11:28<small>农历十月十二 · 六安市金安区</small></div>
+      <div class="where">吉事文华南山店（华野大厦）· 梦幻花海厅</div>
+    </div>
+  </div>
+</body>
+</html>
